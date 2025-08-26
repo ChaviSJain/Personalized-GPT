@@ -1,0 +1,13 @@
+-> made frontend and backend folder structure with basic code
+
+🚀 Next Steps
+
+ADD the keys in .env
+
+✅ Run backend: uvicorn app:app --reload
+
+✅ Run frontend: npm install && npm run dev
+
+🔜 Wire up voice recording to /stt endpoint
+
+🔜 Animate avatar with D-ID once TTS is ready
