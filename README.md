@@ -144,3 +144,41 @@ Multilingual.  GPT + langdetect
 - Set up repo and basic UI mock
 - Get GPT API working with simple chat loop
 - Integrate STT and TTS for voice interaction
+
+
+RECOMMENDED FOLDER STRUCTURE
+
+personalized-GPT/
+├── backend/
+│   ├── app.py               # FastAPI or Flask server
+│   ├── gpt_handler.py       # GPT integration logic
+│   ├── tts_stt.py           # Voice processing
+│   └── requirements.txt     # Python dependencies
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── Avatar.jsx
+│   │   └── ChatWindow.jsx
+│   └── package.json         # React dependencies
+├── assets/
+│   ├── avatar.png           # Your uploaded face
+│   └── voice_samples/       # Your custom voice files
+├── docs/
+│   └── architecture.md      # System design and flow
+├── .gitignore
+├── README.md
+└── LICENSE
+
+
+
+WEEK_1
+
+Emotion Detection -> Deepgram or Azure
+Tool Chaining -> LangChain
+Local LLM -> LLaMA2 or Mistral
+Avatar -> D-ID
+Voice -> ElevenLabs
+Core GPT -> OpenAI GPT-4
+Infra -> AWS + Terraform
+Frontend -> React + Tailwind
