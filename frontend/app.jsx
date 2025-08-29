@@ -1,6 +1,8 @@
 import ChatWindow from './components/ChatWindow'
 import AvatarDisplay from './components/AvatarDisplay'
 import VoiceButton from './components/VoiceButton'
+import VoiceUpload from './components/VoiceUpload'
+
 
 export default function App() {
   return (
@@ -8,6 +10,7 @@ export default function App() {
       <AvatarDisplay />
       <ChatWindow />
       <VoiceButton />
+      <VoiceUpload />
     </div>
   )
 }

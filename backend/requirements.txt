@@ -1,6 +1,13 @@
 fastapi
 uvicorn
 openai
+openai-whisper
 requests
 python-dotenv
+python-multipart
 whisper
+torch
+torchaudio
+transformers
+coqpit
+TTS

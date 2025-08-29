@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, Form
 from gpt_handler import get_gpt_response
 from tts_handler import generate_tts_audio
 from stt_handler import transcribe_audio
@@ -21,6 +21,13 @@ async def stt(file: UploadFile):
     text = transcribe_audio(file_path)
     return {"transcription": text}
 
+@app.post("/upload-voice")
+async def upload_voice(file: UploadFile):
+    file_path = "voice_sample.wav"
+    with open(file_path, "wb") as f:
+        f.write(await file.read())
+    return {"status": "Voice sample uploaded successfully"}
+
 @app.get("/audio")
 def get_audio():
-    return FileResponse("output.mp3", media_type="audio/mpeg")
+    return FileResponse("output.wav", media_type="audio/wav")
